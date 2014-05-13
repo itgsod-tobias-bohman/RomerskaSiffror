@@ -74,8 +74,28 @@ För en mer ingående förklaring, läs på [Wikipedia](http://en.wikipedia.org/
 
 ### Versionshantering ###
 
-Gör en fork av projektet.
+Gör en `fork` av projektet.
 Gör *regelbundna* commits med beskrivande meddelande och synka åtminstone en gång per dag.
+
+Om du vill kan du ta bort de filer som är inte är relevanta för ditt språk
+
+#### Ruby ####
+
+Om du läser kursen i ruby kan du ta bort följande filer och mappar:
+
+* lib/\_\_init\_\_.py
+* lib/romanize.py
+* test/**
+
+#### Python ####
+
+Om du läser kursen i python kan du ta bort föjande filer och mappar:
+
+* lib/romanize.rb
+* spec/**
+* .rspec
+* .gemfile
+
 
 ### Flödesschema ###
 
@@ -86,10 +106,21 @@ Flödesschemat ska checkas in i github.
 
 Programmet skall utvecklas testdrivet.
 
-Testerna finns i `/spec/romanize_spec.rb`.
+#### Ruby ####
+
+
+Testerna finns i `spec/romanize_spec.rb`.
 Läs dem för att förstå hur funktionen skall fungera.
 
 Kör `rspec` för att köra testerna.
+
+#### Python ####
+
+Testerna finns i `test/romanize_test.py`.
+Läs dem för att förstå hur funktionen skall fungera.
+
+Kör `nosetests --rednose` för att köra testerna.
+
 
 ### Utvärdering ###
 
