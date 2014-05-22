@@ -1,3 +1,13 @@
+# Public: Convert slöfjslödfjsdlöfj some text an arbitrary number of times.
+#
+# number  - The Integer to be duplicated.
+#
+# Examples
+#
+#   romanize(4)
+#   # => 'IV'
+#
+# Returns the number converted to a romanized String.
 def romanize(number)
   raise ArgumentError, 'can not encode zero' if number == 0
   raise ArgumentError, 'can not encode negative number' if number < 0
