@@ -1,4 +1,6 @@
 def romanize(number)
+  raise ArgumentError, 'can not encode zero' if number == 0
+
   input_number = number
   roman = ""
   roman_numbers = {
@@ -20,5 +22,7 @@ def romanize(number)
     roman << letter*(input_number / value)
     input_number = input_number % value
   end
+
   return roman
+
 end
