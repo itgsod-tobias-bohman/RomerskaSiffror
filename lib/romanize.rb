@@ -1,5 +1,6 @@
 def romanize(number)
   raise ArgumentError, 'can not encode zero' if number == 0
+  raise ArgumentError, 'can not encode negative number' if number < 0
 
   input_number = number
   roman = ""
