@@ -1,6 +1,6 @@
 # Public: Convert an Integer into an romanized string.
 #
-# number  - The Integer to be duplicated.
+# number  - The Integer to be romanized.
 #
 # Examples
 #
@@ -14,13 +14,13 @@ def romanize(number)
   raise ArgumentError, 'can not encode zero' if number == 0
   raise ArgumentError, 'can not encode negative number' if number < 0
 
-  # Integer to handle the input number
+  # Integer to handle the input number.
   input_number = number
 
-  # String to handle the roman output
+  # String to handle the roman output.
   roman = ""
 
-  # Hash to handle to roman numbers next to Integers
+  # Hash to handle to roman numbers next to Integers.
   roman_numbers = {
       1000 => "M",
       900 => "CM",
@@ -48,6 +48,7 @@ def romanize(number)
     input_number = input_number % value
   end
 
+  # Returns roman version.
   return roman
 
 end
