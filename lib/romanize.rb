@@ -14,9 +14,6 @@ def romanize(number)
   raise ArgumentError, 'can not encode zero' if number == 0
   raise ArgumentError, 'can not encode negative number' if number < 0
 
-  # Integer to handle the input number.
-  input_number = number
-
   # String to handle the roman output.
   roman = ""
 
@@ -37,15 +34,14 @@ def romanize(number)
       1 => "I",
   }
 
-
   roman_numbers.each do |value, letter|
 
     # Inserts current roman letter x times.
-    roman << letter*(input_number / value)
+    roman << letter*(number / value)
 
     # Decreases the input_number via modulo value.
     #   Modulo divides input_number/value evenly, the rest of the numbers that can't be evenly divided gets pushed into input_number.
-    input_number = input_number % value
+    number = number % value
   end
 
   # Returns roman version.
